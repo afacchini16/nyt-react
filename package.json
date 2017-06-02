@@ -2,7 +2,7 @@
   "name": "nyt-react",
   "version": "1.0.0",
   "description": "nty react homework",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack & node server",

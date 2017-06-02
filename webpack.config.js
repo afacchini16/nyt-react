@@ -1,11 +1,11 @@
 module.exports = {
 
   // This is the entry point or start of our react applicaton
-  entry: "./app.js",
+  entry: "app.js",
 
   // The plain compiled JavaScript will be output into this file
   output: {
-    filename: "public/bundle.js"
+    filename: "./public/bundle.js"
   },
   resolve: {
       extensions: ['', '.js', '.jsx']
@@ -17,7 +17,8 @@ module.exports = {
     loaders: [
       {
         // Only working with files that in in a .js or .jsx extension
-        test: /\.es6\.js$/, loader: "babel-loader",
+        test: /\.js$/, 
+            loader: "babel-loader",
         query: {
           presets: ['es2015']
         },
@@ -32,9 +33,9 @@ module.exports = {
       }
     ]
   },
-//   resolve: {
-//       extensions: ['.es6.js']
-//   },
+  resolve: {
+      extensions: ['.js']
+  },
   // This lets us debug our react code in chrome dev tools. Errors will have lines and file names
   // Without this the console says all errors are coming from just coming from bundle.js
   devtool: "eval-source-map"
