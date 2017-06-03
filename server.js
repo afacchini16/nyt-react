@@ -29,10 +29,13 @@ db.once("open", function(){
 
 app.get("/", function(request, response) {
     response.sendFile(__dirname + "/public/index.html");
-})
+});
 
 // Need to use express to handle and add routes and all the DB handling stuff here:
+app.post("/api/saved/", function(request, response){
+    console.log("BODY: " + request.body);
+});
 
 app.listen(PORT, function() {
     console.log("App listening on port : " + PORT);
-})
+});
